@@ -1,0 +1,130 @@
+/*
+Theme Name: One Template Theme
+Description: Ein experimentelles Theme um auszutesten, wie weit man mit nur einem Template (index.php) und dem WP Block Editor kommt.
+
+Author: Enno Hyttrek
+Author URI: www.ennohyttrek.de
+Version: 1.0.0
+
+Copyright (C) 2021  Enno Hyttrek
+
+*/
+
+
+
+/*-------------
+RESET
+-------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-nav {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*-------------
+LAYOUT
+-------------*/
+
+h1,h2,h3,h4,h5,h6,p,ul,ol,.more-link {
+    padding: 1em 20px;
+}
+
+p {
+    padding-top: 0;
+}
+
+/*-------------
+NAVIGATION
+-------------*/
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.added-nav ul,
+.main-nav ul {
+  display: flex;
+    flex-wrap: wrap;
+}
+
+.added-nav ul li,
+.main-nav ul li {
+    margin-right: 1em;
+}
+
+.mobile-nav a {
+    display: inline-block;
+    width: 100%;
+    font-size: 2em;
+    border-bottom: 1px solid #000;
+}
+
+
+
+/*-------------
+TYPOGRAPHY
+-------------*/
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+/*-------------
+COLOR & STYLE
+-------------*/
+
+
+nav a {
+    color: #000;
+}
+
+nav a:hover {
+    color: rgb(255,128,0);
+}
+
+/*-------------
+RESPONSIVE
+-------------*/
+
+@media only screen and (min-width: 544px) {
+    
+    .main-nav {
+    display: block;
+}
+    
+        .mobile-nav {
+    display: none;
+}
+    
+}
+
+@media only screen and (min-width: 921px) {
+    
+    figure,
+    .main-nav > div,
+    .main-content {
+        max-width: 60em;
+        margin: 0 auto;
+    }
+    
+}
+
+/*-------------
+DEV OVERRIDES
+-------------*/
