@@ -4,7 +4,7 @@ An experimental WordPress Theme that works with just one PHP template.
 
 Author: Enno Hyttrek
 Author URI: www.ennohyttrek.de
-Version: 1.0.1
+Version: 1.0.2
 
 Copyright (C) 2021  Enno Hyttrek
 Published under a GNU GENERAL PUBLIC LICENSE, Version 3
@@ -27,9 +27,14 @@ img {
     height: auto;
 }
 
-    .main-nav {
-        display: none;
-    }
+.main-nav {
+    display: none;
+}
+
+.comment-list,
+nav ul {
+    list-style-type: none;
+}
 
 /*-------------
 LAYOUT
@@ -75,7 +80,7 @@ nav ul li {
 }
 
 .mobile-nav ul {
-       margin-right: 0; 
+    margin-right: 0;
 }
 
 .mobile-nav a {
@@ -126,10 +131,7 @@ RESPONSIVE
 
 }
 
-@media only screen and (min-width: 921px) {
-
-
-}
+@media only screen and (min-width: 921px) {}
 
 /*-------------
 DEV OVERRIDES
