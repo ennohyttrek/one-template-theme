@@ -16,10 +16,10 @@ add_action( 'wp_enqueue_scripts', 'zerolab_scripts' );
 function register_my_menus() {
   register_nav_menus(
     array(
-        'header-menu' => __( 'Haupt Navigation' ),
-        'mobile-menu' => __( 'Responsive Menu' ),
-        'footer-menu' => __( 'Secondary Menu' ),
-        'added-menu' => __( 'Added Menu' )
+        'main-menu' => __( 'Main Menu, shortcode [main-menu]' ),
+        'mobile-menu' => __( 'Mobile Menu, shortcode [mobile-menu]' ),
+        'secondary-menu' => __( 'Secondary Menu, shortcode [secondary-menu]' ),
+        'extra-menu' => __( 'Extra Menu, shortcode [extra-menu]' )
      )
    );
  }
@@ -29,14 +29,53 @@ function register_my_menus() {
 function main_menu_shortcode() {
 
     return wp_nav_menu( array( 
-        'theme_location' => 'added-menu',
+        'theme_location' => 'main-menu',
         'container' => 'nav',
-        'container_class'   => "added-nav",
-        'container_id'      => "added-nav",
+        'container_class'   => "main-nav",
+        'container_id'      => "main-nav",
         'echo' => false ) );
 
 }
-add_shortcode('added-menu', 'main_menu_shortcode');
+add_shortcode('main-menu', 'main_menu_shortcode');
+
+//Shortcode Mobile Menu [mobile-menu]
+function mobile_menu_shortcode() {
+
+    return wp_nav_menu( array( 
+        'theme_location' => 'mobile-menu',
+        'container' => 'nav',
+        'container_class'   => "mobile-nav",
+        'container_id'      => "mobile-nav",
+        'echo' => false ) );
+
+}
+add_shortcode('mobile-menu', 'mobile_menu_shortcode');
+
+//Shortcode Secondary Menu [secondary-menu]
+function secondary_menu_shortcode() {
+
+    return wp_nav_menu( array( 
+        'theme_location' => 'secondary-menu',
+        'container' => 'nav',
+        'container_class'   => "secondary-nav",
+        'container_id'      => "secondary-nav",
+        'echo' => false ) );
+
+}
+add_shortcode('secondary-menu', 'secondary_menu_shortcode');
+
+//Shortcode extra Menu [extra-menu]
+function extra_menu_shortcode() {
+
+    return wp_nav_menu( array( 
+        'theme_location' => 'extra-menu',
+        'container' => 'nav',
+        'container_class'   => "extra-nav",
+        'container_id'      => "extra-nav",
+        'echo' => false ) );
+
+}
+add_shortcode('extra-menu', 'extra_menu_shortcode');
 
 add_theme_support( 'post-thumbnails' );
 
