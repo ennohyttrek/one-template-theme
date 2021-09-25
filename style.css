@@ -97,6 +97,10 @@ body {
     line-height: 1.3;
 }
 
+h1,h2 {
+font-family: 'Playfair Display', serif;
+}
+
 /*-------------
 COLOR & STYLE
 -------------*/
