@@ -78,6 +78,7 @@ function extra_menu_shortcode() {
 }
 add_shortcode('extra-menu', 'extra_menu_shortcode');
 
+
 add_theme_support( 'post-thumbnails' );
 
 ?>
