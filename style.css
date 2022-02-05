@@ -1,20 +1,13 @@
 /*
-Theme Name: One Template Theme
-An experimental WordPress Theme that works with just one PHP template.
-
-Author: Enno Hyttrek
-Author URI: www.ennohyttrek.de
-Version: 1.0.4
-
-Copyright (C) 2021  Enno Hyttrek
-Published under a GNU GENERAL PUBLIC LICENSE, Version 3
+Theme Name: oneLAB
+Version: 1.2.1
 */
 
 
 
-/*-------------
+/*---------------------
 RESET
--------------*/
+---------------------*/
 
 * {
     margin: 0;
@@ -22,22 +15,18 @@ RESET
     box-sizing: border-box;
 }
 
-img {
-    width: 100%;
-    height: auto;
+a {
+    text-decoration: none;
 }
 
-.main-nav {
-    display: none;
+.wp-block-cover {
+    padding: 0;
 }
 
-nav ul {
-    list-style-type: none;
-}
 
-/*-------------
+/*---------------------
 LAYOUT
--------------*/
+---------------------*/
 
 h1,
 h2,
@@ -46,96 +35,127 @@ h4,
 h5,
 h6,
 p,
-ul,
-ol,
-.more-link {
-    padding: 1em 20px;
+.main-nav {
+    padding: 0 20px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
-    padding-top: 0;
+    margin-bottom: 1rem;
 }
 
-/*-------------
-NAVIGATION
--------------*/
+.main-wrapper {}
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
+nav.main-nav,
+.main-content,
+.main-footer {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-nav a {
-    text-decoration: none;
+.main-content {
+    min-height: 70vh;
 }
 
-nav ul li {
-    margin-right: 1em;
-}
-
-.mobile-nav ul {
-    display: block;
-}
-
-.mobile-nav ul {
-    margin-right: 0;
-}
-
-.mobile-nav a {
-    display: inline-block;
-    width: 100%;
-    font-size: 2em;
-    border-bottom: 1px solid #000;
+/**
+Main Nav
+**/
+nav.main-nav {
+    height: 2em;
 }
 
 
+/**
+My Post Header
+**/
 
-/*-------------
+.my-post-header {
+  height: clamp(0px, 60vw, 900px);
+}
+
+.my-post-header p {
+    max-width: 24em;
+}
+
+
+/**
+My Post Content
+**/
+
+.my-post-content{
+    padding: 1rem 0;
+} 
+
+.my-post-content p {
+    max-width: 34em;
+}
+
+/*---------------------
 TYPOGRAPHY
--------------*/
+---------------------*/
 
 body {
     font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.my-post-header p {
     font-weight: 300;
-    line-height: 1.3;
 }
 
-h1,h2 {
-font-family: 'Playfair Display', serif;
+p {
+    line-height: 1.5;
 }
 
-/*-------------
-COLOR & STYLE
--------------*/
-
-
-nav a {
-    color: #000;
+h1 {
+    font-size: 3em;
+    font-weight: 700;
 }
 
-nav a:hover {
-    color: rgb(255, 128, 0);
+h2 {
+    font-size: 3em;
+    font-weight: 500;
 }
 
-/*-------------
+/*---------------------
+COLOR & STYLE 
+---------------------*/
+
+.main-header {
+
+}
+
+.main-footer,
+body {
+    background: hsl(200, 13%, 13%);
+    color: #fff;
+}
+
+
+.main-wrapper {
+/*    background: #fff;
+    color: hsl(200, 13%, 13%);*/
+}
+
+/*---------------------
 RESPONSIVE
--------------*/
+---------------------*/
+
 
 @media only screen and (min-width: 544px) {
-
-    .main-nav {
-        display: block;
-    }
-
-    .mobile-nav {
-        display: none;
-    }
-
+    
 }
 
-@media only screen and (min-width: 921px) {}
+@media only screen and (min-width: 921px) {
+    
+}
 
-/*-------------
-DEV OVERRIDES
--------------*/
+/*---------------------
+DEV
+---------------------*/
