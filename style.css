@@ -1,6 +1,7 @@
 /*
-Theme Name: oneLAB
-Version: 1.2.1
+Theme Name: Ehy 2022
+Version: 1.0
+Author: Enno Hyttrek
 */
 
 
@@ -19,8 +20,17 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .wp-block-cover {
     padding: 0;
+}
+
+.main-nav-wrapper {
+    display: none;
 }
 
 
@@ -28,6 +38,8 @@ a {
 LAYOUT
 ---------------------*/
 
+nav.mobile-nav a,
+.main-content figure,
 h1,
 h2,
 h3,
@@ -35,10 +47,12 @@ h4,
 h5,
 h6,
 p,
-.main-nav {
+.main-nav,
+.secondary-nav {
     padding: 0 20px;
 }
 
+.main-content figure,
 h1,
 h2,
 h3,
@@ -49,25 +63,218 @@ p {
     margin-bottom: 1rem;
 }
 
-.main-wrapper {}
 
-nav.main-nav,
+
+/**
+EHy Grid
+**/
+
+
+.ehy-grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .ehy-grid-article {
+    width: 50%;
+    height: 50vw;
+    }
+
+.ehy-grid-wrapper figure {
+    margin:0;
+    padding: 10%;
+}
+
+
+.ehy-grid-article {
+    position: relative;
+    border-radius: 0.5em;
+}
+
+.ehy-grid-article figure,
+.ehy-grid-article p {
+    position: absolute;
+}
+
+.ehy-grid-article p {
+    text-align: right;
+    bottom: 0;
+}
+
+.ehy-grid-article:hover {
+    background: hsl(200,21%,94%);
+}
+
+
+.ehy-grid-article p {
+    display: none;
+width: 100%;
+    font-weight: 300;
+
+}
+
+.ehy-grid-article p:hover {
+    color: #fff;
+    color: rgb(255,128,0);
+}
+
+.ehy-grid-article:hover p {
+    display: block;
+}
+
+
+
+
+
+
+
+/** --- **/
+
+.main-header-container,
+.main-nav,
 .main-content,
 .main-footer {
     max-width: 1440px;
     margin: 0 auto;
 }
 
+
+.main-header {
+
+}
+
+
+.main-header .header-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-header .header-image img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+
+
 .main-content {
     min-height: 70vh;
 }
 
-/**
-Main Nav
-**/
-nav.main-nav {
-    height: 2em;
+
+
+.my-content-module {
+    padding-top: 1em;
 }
+
+.colspan-2 {
+    column-span: 2;
+}
+
+/**
+Nav Global
+**/
+
+nav ul {
+    list-style-type: none;
+}
+
+/**
+Main Nav Layout
+**/
+
+
+
+.main-nav-wrapper {
+    position: sticky;
+    z-index: 999;
+    top: 0;
+}
+
+.main-nav > div > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.main-nav > div > ul > li {
+    position: relative;
+    margin-right: 1em;
+}
+
+.main-nav > div > ul > li > ul {
+    z-index: 1000;
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+}
+
+.main-nav > div > ul > li:hover > ul  {
+    height: auto;
+}
+
+.main-nav > div > ul > li a {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0.3em;
+}
+
+
+/**
+Main Footer
+**/
+.main-footer {
+min-height: 20vh;
+} 
+
+
+/**
+Burger Icon Layout
+**/
+
+
+.burger-icon {
+    position: fixed;
+    width: 100%;
+    z-index: 998;
+    top: 0;
+}
+
+
+        .burger-icon {
+            text-align: center;
+        min-height: 5vh;
+            background: pink;
+        }
+        
+        .burger-icon span {
+            display: inline-block;
+            margin: 0;
+            line-height: 0.88;
+        }
+        
+        .burger-icon > a > span {
+            width: 50px;
+        }
+        
+        .burger-icon > a > span > span {
+            width: 100%;
+            height: 0.6em;
+            background: red;
+            border-radius: 0.3em;
+        }
+
+
+/**
+Mobile Nav Layout
+**/
+
+.mobile-nav-wrapper {
+    min-height: 100vh;
+}
+
 
 
 /**
@@ -75,7 +282,7 @@ My Post Header
 **/
 
 .my-post-header {
-  height: clamp(0px, 60vw, 900px);
+    height: clamp(0px, 60vw, 900px);
 }
 
 .my-post-header p {
@@ -87,9 +294,9 @@ My Post Header
 My Post Content
 **/
 
-.my-post-content{
+.my-post-content {
     padding: 1rem 0;
-} 
+}
 
 .my-post-content p {
     max-width: 34em;
@@ -105,12 +312,18 @@ body {
     font-size: 18px;
 }
 
+
+nav.main-nav .bold {
+    font-weight: 600;
+}
+
+
 .my-post-header p {
     font-weight: 300;
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.3;
 }
 
 h1 {
@@ -120,28 +333,112 @@ h1 {
 
 h2 {
     font-size: 3em;
-    font-weight: 500;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 1.7em;
+    font-weight: 600;
+    column-span: all;
+    padding-top: 1em;
+}
+
+.main-footer {
+    font-size: 0.7em;
+}
+
+/**
+Mobile Nav Typography
+**/
+
+nav.mobile-nav {
+    font-size: 1.7em;
 }
 
 /*---------------------
 COLOR & STYLE 
 ---------------------*/
 
-.main-header {
 
-}
-
-.main-footer,
 body {
     background: hsl(200, 13%, 13%);
+}
+
+
+
+body,
+a {
     color: #fff;
 }
 
 
-.main-wrapper {
-/*    background: #fff;
-    color: hsl(200, 13%, 13%);*/
+
+
+/**
+Color Schemes
+**/
+
+/***
+Color Scheme A
+***/
+
+.ehy-color-a {
+    background: hsl(200, 13%, 13%);
 }
+
+.ehy-color-a,
+.ehy-color-a a,
+.ehy-color-a .main-nav > .menu a:hover {
+       color: #fff; 
+}
+
+.ehy-color-a .main-nav-container > .menu {
+        background: hsla(200, 13%, 13%, 0.8);
+}
+
+.ehy-color-a .main-nav-container > .menu a {
+        color: rgba(255, 255, 255, 0.8);
+}
+
+.ehy-color-a .main-nav-container > .menu > ul > li > ul {
+    background: hsla(200, 13%, 21%, 0.9);
+}
+
+
+/***
+Color Scheme B
+***/
+
+
+.ehy-color-b {
+    background: hsl(200, 8%, 194%);
+}
+
+
+.ehy-color-b,
+.ehy-color-b a {
+       color: hsl(200, 13%, 8%); 
+}
+
+
+.ehy-color-b .main-nav  {
+        background: hsla(200, 8%, 100%, 0.8);
+}
+
+
+.ehy-color-b .main-nav a:hover {
+        color: hsla(30, 94%, 55%);
+}
+
+
+.ehy-color-b .main-nav > div > ul > li > ul {
+    background: hsla(200, 8%, 55%, 0.9);
+}
+
+/*** ***/
+
+
+
 
 /*---------------------
 RESPONSIVE
@@ -149,13 +446,81 @@ RESPONSIVE
 
 
 @media only screen and (min-width: 544px) {
+
+.main-nav-wrapper {
+    display: block;
+}
     
+    
+    .burger-icon,
+    .mobile-nav-wrapper {
+    display: none;        
+    }    
+    
+    .main-content {
+
+    }
+
+    
+    .ehy-grid-article {
+    width: 33vw;
+    height: 33vw;
+    }
+    
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
 }
 
 @media only screen and (min-width: 921px) {
+
+    .multi-col {
+        column-count: 3;
+    }
+    
+    .ehy-grid-article {
+    width: 25vw;
+    height: 25vw;
+        
+    }
+    
+
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+    
+
     
 }
+
+
+@media only screen and (min-width: 1441px) {
+    
+        .ehy-grid-article {
+        width: 360px;
+        height: 360px;
+        
+    }
+
+    
+
+
+
+}
+
+
 
 /*---------------------
 DEV
 ---------------------*/
+
+
+
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fibonacci Row</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .outer-wrapper {
+            position: relative;
+            max-width: 1440px;
+            margin: 0 auto;
+            background: red;
+            min-height: 200vh;
+        }
+
+        .module {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url(img/171005-ehy-conceptDesign-Zhuzhou-2.jpg);
+            background-size: 150%;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-right: 1px solid #fff;
+                        border-bottom: 1px solid #fff;
+
+        }
+
+        .module-1a {
+
+            width: calc(1/13*100%);
+            height: calc(1/13*100vw);
+        }
+
+        .module-1b {
+background-image: url(img/171005-ehy-conceptDesign-Ningbo-5.jpg);
+            width: calc(1/13*100%);
+            height: calc(1/13*100vw);
+            left: calc(1/13*100%);
+        }
+
+        .module-2 {
+background-image: url(img/171005-ehy-conceptDesign-Ningbo-8.jpg);
+            width: calc(2/13*100%);
+            height: calc(2/13*100vw);
+            top: calc(1/13*100vw);
+        }
+
+        .module-3 {
+background-image: url(img/171005-ehy-conceptDesign-Zhuzhou-3.jpg);
+            width: calc(3/13*100%);
+            height: calc(3/13*100vw);
+            left: calc(2/13*100%);
+        }
+
+        .module-5 {
+background-image: url(img/171005-ehy-conceptDesign-Zhuzhou-4.jpg);
+            width: calc(5/13*100%);
+            height: calc(5/13*100vw);
+            top: calc(3/13*100vw);
+        }
+
+        .module-8 {
+background-image: url(img/171005-ehy-conceptDesign-Zhuzhou-5.jpg);
+            width: calc(8/13*100%);
+            height: calc(8/13*100vw);
+            left: calc(5/13*100%);
+        }
+
+
+
+        @media only screen and (min-width: 1441px) {
+            
+            .module-1a {
+                height: calc(1/13*1440px);
+            }
+
+            .module-1b {
+                height: calc(1/13*1440px);
+            }
+
+            .module-2 {
+                height: calc(2/13*1440px);
+                top: calc(1/13*1440px);
+            }
+
+            .module-3 {
+                height: calc(3/13*1440px);
+            }
+
+            .module-5 {
+                height: calc(5/13*1440px);
+                top: calc(3/13*1440px);
+            }
+
+            .module-8 {
+                height: calc(8/13*1440px);
+            }
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="outer-wrapper">
+
+        <div class="fibonacci-row">
+            <div class="module module-8"></div>
+            <div class="module module-5"></div>
+            <div class="module module-3"></div>
+            <div class="module module-2"></div>
+            <div class="module module-1b"></div>
+            <div class="module module-1a"></div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body></html>

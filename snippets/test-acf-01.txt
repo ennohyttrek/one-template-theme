@@ -1,0 +1,5 @@
+<?php 
+$my_loop_1 = get_field('loop-1');
+$my_loop_1_value = $my_loop_1->slug;
+?>
+<h3><?php echo esc_html( $my_loop_1_value ); ?></h3>

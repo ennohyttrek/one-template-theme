@@ -1,0 +1,42 @@
+{
+    "version": 2,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "Sub Black",
+                    "slug": "sub-black",
+                    "color": "hsl(200,13%,13%)"
+                },
+                {
+                    "name": "Sub White",
+                    "slug": "sub-white",
+                    "color": "hsl(200,13%,94%)"
+                },
+                {
+                    "name": "Dark Grey",
+                    "slug": "dark-grey",
+                    "color": "hsl(200,21%,34%)"
+                },
+                {
+                    "name": "Mid Grey",
+                    "slug": "mid-grey",
+                    "color": "hsl(200,21%,55%)"
+                },
+                {
+                    "name": "Light Grey",
+                    "slug": "light-grey",
+                    "color": "hsl(200,21%,76%)"
+                },
+                {
+                    "name": "White",
+                    "slug": "white",
+                    "color": "#fff"
+                }
+
+            ],
+            "duotone": [],
+            "customDuotone": false
+        }
+    }
+}
